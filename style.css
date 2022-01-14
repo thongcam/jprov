@@ -467,6 +467,7 @@ header.header-up {
   margin-top: 0;
   max-width: 300px;
   height: 5rem;
+  color: #595959;
 }
 
 @media screen and (min-width: 800px) and (max-width: 1116px) {
