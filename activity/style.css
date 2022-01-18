@@ -1,0 +1,93 @@
+body {
+  --cyan: #3f989a;
+  --light-cyan: #8cc1c2;
+  --lighter-cyan: #d9eaeb;
+  --green: #4c9455;
+  --purple: #644380;
+  --dark-grey: #1d1d1d;
+  --grey: #eeeeee;
+  --white: #ffffff;
+
+  --animation-speed: 0.2s;
+}
+
+.page-icon {
+  height: 200px;
+}
+
+.single-page .title {
+  margin-top: 50px;
+}
+
+.single-page .content-container > p {
+  --content-padding: clamp(20px, 7vw, 50px);
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding-left: var(--content-padding);
+  padding-right: var(--content-padding);
+  width: 100%;
+}
+
+.activity-page .content-container {
+  padding-bottom: 80px;
+}
+
+.activity-details-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  background-color: var(--lighter-cyan);
+}
+
+.activity-details-content-wrapper {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+@media screen and (min-width: 850px) {
+  .activity-image-key-info-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .activity-image {
+    margin-right: 20px;
+  }
+}
+
+.back-to-toolkit {
+  display: inline-block;
+  margin-bottom: 60px;
+}
+
+.activity-image {
+  width: min(100%, 500px);
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  margin-bottom: 50px;
+}
+
+ul.activity-key-info {
+  padding-left: 0;
+  list-style-type: none;
+  margin-bottom: 50px;
+}
+
+ul.activity-key-info li {
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.activity-page h2 {
+  font-weight: bold;
+}
+
+ol li {
+  margin-bottom: 1rem;
+}
+
+.activity-page footer {
+  margin-top: 0;
+}

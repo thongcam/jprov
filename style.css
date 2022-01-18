@@ -145,8 +145,6 @@ a.button-cta:active {
   background-color: var(--cyan);
 }
 
-/* FRONT PAGE */
-
 img.logo {
   height: 40px;
 }
@@ -363,8 +361,9 @@ header.header-up {
 }
 
 #header-nav-menu.opened ul {
-  padding: 0px 90px 0px var(--x-padding);
+  padding: 0px 90px 0px calc(var(--x-padding) + 5px);
   list-style-type: none;
+  max-width: 200px;
 }
 
 #header-nav-menu.opened ul li {
@@ -374,12 +373,118 @@ header.header-up {
 #header-nav-menu.opened ul li a {
   font-weight: 500;
   text-decoration: none;
-  padding: 10px 50px 10px 5px;
+  padding: 10px 50px 10px 0px;
+}
+
+footer {
+  margin-top: 65px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #e5e5e5;
+}
+
+.footer-content-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-buttons-wrapper {
+  display: grid;
+  grid-template:
+    "contactus about" 1fr
+    "submitpractice submitpractice" 1fr / max-content max-content;
+  column-gap: 15px;
+  row-gap: 15px;
+}
+
+.footer-buttons-wrapper #footer-contact-us {
+  grid-area: contactus;
+}
+
+.footer-buttons-wrapper #footer-about {
+  grid-area: about;
+}
+
+.footer-buttons-wrapper #footer-submit-practice {
+  grid-area: submitpractice;
+}
+
+.footer-info {
+  margin-top: 100px;
+}
+
+.footer-info .logo {
+  margin-bottom: 25px;
+}
+
+.social-media-wrapper {
+  display: flex;
+  margin-top: 40px;
+}
+
+.social-media-wrapper a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+
+#facebook {
+  background-image: url("./assets/social-facebook.svg");
+}
+
+#instagram {
+  background-image: url("./assets/social-instagram.svg");
+}
+
+#linkedin {
+  background-image: url("./assets/social-linkedin.svg");
+}
+
+#tiktok {
+  background-image: url("./assets/social-tiktok.svg");
+}
+
+#twitter {
+  background-image: url("./assets/social-twitter.svg");
+}
+
+#youtube {
+  background-image: url("./assets/social-youtube.svg");
+}
+
+.aalto-logo {
+  margin-top: 100px;
+  height: 80px;
+}
+
+@media screen and (min-width: 800px) {
+  .footer-content-wrapper {
+    display: grid;
+    grid-template:
+      "buttons info" min-content
+      "aalto aalto" auto / auto auto;
+    column-gap: min(350px, 30vw);
+  }
+
+  .footer-buttons-wrapper {
+    height: min-content;
+    grid-area: buttons;
+  }
+
+  .footer-info {
+    margin-top: 0;
+    grid-area: info;
+  }
+
+  .aalto-logo {
+    grid-area: aalto;
+  }
 }
 
 .content-container {
   transform: translateY(80px);
-  padding: 80px 0px 100px 0;
+  padding: 90px 0px 100px 0;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -395,6 +500,8 @@ header.header-up {
   padding-right: var(--content-padding);
   width: 100%;
 }
+
+/* FRONT PAGE */
 
 .value-proposition {
   display: flex;
@@ -547,108 +654,4 @@ header.header-up {
   }
 }
 
-footer {
-  margin-top: 65px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: #e5e5e5;
-}
-
-.footer-content-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.footer-buttons-wrapper {
-  display: grid;
-  grid-template:
-    "contactus about" 1fr
-    "submitpractice submitpractice" 1fr / max-content max-content;
-  column-gap: 15px;
-  row-gap: 15px;
-}
-
-.footer-buttons-wrapper #footer-contact-us {
-  grid-area: contactus;
-}
-
-.footer-buttons-wrapper #footer-about {
-  grid-area: about;
-}
-
-.footer-buttons-wrapper #footer-submit-practice {
-  grid-area: submitpractice;
-}
-
-.footer-info {
-  margin-top: 100px;
-}
-
-.footer-info .logo {
-  margin-bottom: 25px;
-}
-
-.social-media-wrapper {
-  display: flex;
-  margin-top: 40px;
-}
-
-.social-media-wrapper a {
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin-right: 15px;
-}
-
-#facebook {
-  background-image: url("./assets/social-facebook.svg");
-}
-
-#instagram {
-  background-image: url("./assets/social-instagram.svg");
-}
-
-#linkedin {
-  background-image: url("./assets/social-linkedin.svg");
-}
-
-#tiktok {
-  background-image: url("./assets/social-tiktok.svg");
-}
-
-#twitter {
-  background-image: url("./assets/social-twitter.svg");
-}
-
-#youtube {
-  background-image: url("./assets/social-youtube.svg");
-}
-
-.aalto-logo {
-  margin-top: 100px;
-  height: 80px;
-}
-
-@media screen and (min-width: 800px) {
-  .footer-content-wrapper {
-    display: grid;
-    grid-template:
-      "buttons info" min-content
-      "aalto aalto" auto / auto auto;
-    column-gap: min(350px, 30vw);
-  }
-
-  .footer-buttons-wrapper {
-    height: min-content;
-    grid-area: buttons;
-  }
-
-  .footer-info {
-    margin-top: 0;
-    grid-area: info;
-  }
-
-  .aalto-logo {
-    grid-area: aalto;
-  }
-}
+/* Recommendations and pre-loved practices */
