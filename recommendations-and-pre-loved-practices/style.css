@@ -19,6 +19,10 @@ body {
   margin-top: 50px;
 }
 
+.single-page .content-container {
+  padding-bottom: 200px;
+}
+
 .single-page .content-container > p {
   --content-padding: clamp(20px, 7vw, 50px);
   box-sizing: border-box;
@@ -26,6 +30,10 @@ body {
   padding-left: var(--content-padding);
   padding-right: var(--content-padding);
   width: 100%;
+}
+
+.help-wrapper {
+  margin-top: 50px;
 }
 
 .help-button {
@@ -107,4 +115,96 @@ body {
   border: 2px solid var(--cyan);
   box-sizing: border-box;
   border-radius: 20px;
+}
+
+.filters-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.filters-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: stretch;
+  justify-content: stretch;
+  column-gap: 60px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-checkboxes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  justify-content: center;
+  justify-items: start;
+  column-gap: 10px;
+}
+
+.filter-checkbox {
+  width: 130px;
+}
+
+.filter-checkbox input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+}
+
+.filter-checkbox label {
+  text-align: center;
+  display: block;
+}
+
+.filter-checkbox label:hover {
+  cursor: pointer;
+}
+
+.filter-checkbox input[type="checkbox"]:checked + label {
+  background-color: var(--cyan);
+}
+
+.filter-checkbox input[type="checkbox"]:checked + label:hover {
+  color: white;
+}
+
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
+  column-gap: 70px;
+  row-gap: 50px;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.item-card {
+  display: none;
+}
+
+.item-card img {
+  width: max-content;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  background-color: var(--grey);
+}
+
+.item-card h3 {
+  font-weight: 300;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
 }
